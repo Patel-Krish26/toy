@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Expensive Toys</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcHcXzlP9vRXhUzxroZf1tLyyXp3Pqc9iAMQ&s" rel="icon" type="image/x-icon" />
+
+
+    <link href="design.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark luxury-navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fs-2" href="index.html"><b>BMW Toys</b></a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <!-- Search -->
+                <div class="mx-lg-3 my-3 my-lg-0 search-wrapper">
+
+                    <div class="search-box w-100 gap-1">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search BMW toys...">
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="d-flex gap-3 ms-lg-auto align-items-center">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                    <a class="nav-link text-white" href="about.html">About Us</a>
+
+                    <a class="nav-link text-white" href="cart.html">
+                        <i class="fa-solid fa-cart-arrow-down"></i>
+                    </a>
+
+                    <!-- Offcanvas button -->
+                    <button class="btn text-white"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasMenu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" id="offcanvasMenu" style="width:360px; background:#f8f9fa;">
+
+        <!-- Header -->
+        <div class="offcanvas-header border-bottom border-secondary py-2">
+            <div>
+                <h5 class="mb-0 fw-bold text-dark">BMW Toys</h5>
+                <small class="text-secondary">Personal Dashboard</small>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <!-- Offcanvas Body -->
+        <div class="offcanvas-body d-flex flex-column p-3 gap-4">
+
+            <!-- Profile Card -->
+            <div class="p-3 rounded-4" style="background:rgba(255,255,255,0.9); backdrop-filter:blur(8px);">
+
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <div id="userAvatar"
+                         class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center"
+                         style="width:48px;height:48px;font-weight:600;">
+                        G
+                    </div>
+
+                    <div>
+                        <div id="userName" class="fw-semibold text-dark">Guest</div>
+                        <small id="userEmail" class="text-secondary">Not logged in</small>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-2 flex-wrap">
+
+                    <!-- Logged-in buttons -->
+
+                    <button id="logoutBtn"
+                            class="btn btn-outline-danger btn-sm w-50 rounded-pill">
+                        Logout
+                    </button>
+
+                    <!-- Logged-out buttons -->
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <a id="loginBtn"
+                           href="login.html"
+                           class="btn btn-outline-dark btn-sm w-50 rounded-pill">
+                            Login
+                        </a>
+
+                        <a id="registerBtn"
+                           href="register.html"
+                           class="btn btn-outline-danger btn-sm w-50 rounded-pill">
+                            Register
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Quick Actions -->
+            <div>
+                <small class="text-uppercase text-secondary fw-semibold">Quick Access</small>
+                <div class="list-group list-group-flush mt-2">
+                    <!-- Cart -->
+                    <a href="cart.html" class="list-group-item list-group-item-action bg-transparent text-dark border-0 px-0">
+                        📦 <span class="ms-2">My Cart</span>
+                    </a>
+
+                    <!-- Address -->
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent text-dark border-0 px-0">
+                        📍 <span class="ms-2">Address: 123 Toy Street, Toytowns</span>
+                    </a>
+
+                    <!-- Help Center -->
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent text-dark border-0 px-0">
+                        🆘 <span class="ms-2 fw-semibold">Help Center</span>
+                        <ul class="mt-1 mb-0 ps-4">
+                            <li>
+                                📞
+                                <span class="ms-1">Phone: +1 234 567 890</span>
+                            </li>
+                            <li>
+                                📧
+                                <span class="ms-1">Email: info@bmwtoys.co</span>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <!-- CTA -->
+            <div class="mt-auto text-center">
+                <div class="p-3 rounded-4" style="background:rgba(0,0,0,0.05);">
+                    <p class="mb-1 fw-semibold text-dark">🔥 Limited Offer</p>
+                    <p class="small text-secondary mb-2">
+                        Use code
+                        <b>BMW20</b>
+                    </p>
+                    <button class="btn btn-warning btn-sm rounded-pill w-100 fw-bold">
+                        Apply Coupon
+                    </button>
+                </div>
+
+                <small class="text-secondary d-block mt-3">
+                    © 2026 BMW Toys
+                </small>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="hero-image">
+        <img src="https://d2hucwwplm5rxi.cloudfront.net/wp-content/uploads/2022/01/12064833/BMW-pre-owned-cars-in-Dubai-Cover-12-01.jpg" alt="BMW Cars">
+        <div class="hero-overlay">
+            <h1>Experience BMW</h1>
+            <p>Luxury • Performance • Innovation</p>
+        </div>
+    </div>
+
+    <div id="intro">
+        <div class="logo-rotate ">
+            <img src="https://images.seeklogo.com/logo-png/17/2/bmw-logo-png_seeklogo-172382.png" alt="BMW Logo" id="logo-img">
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <h2 class="mb-4 text-center imgadd">The Products</h2>
+
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW 5 Series"
+                     data-price="60"
+                     data-img="https://images.hgmsites.net/med/2025-bmw-5-series-sedan-angular-front-exterior-view_100967099_m.webp"
+                     data-desc="Luxury executive sedan with premium interior and performance.">
+                    <img src="https://images.hgmsites.net/med/2025-bmw-5-series-sedan-angular-front-exterior-view_100967099_m.webp" alt="BMW 5 Series" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW 5 Series</h5>
+                        <p class="card-text">$60</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW 7 Series"
+                     data-price="99"
+                     data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwIgAjiXe-yIUJjROrQvFjjwcp3Vz0QogjEQ&s"
+                     data-desc="Full-size luxury sedan with advanced technology and comfort features.">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwIgAjiXe-yIUJjROrQvFjjwcp3Vz0QogjEQ&s" alt="BMW 7 Series" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW 7 Series</h5>
+                        <p class="card-text">$99</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW 3 Series"
+                     data-price="47"
+                     data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSgHKo-iCUw-vb1I8xAAbil-KCYnMqh9G17g&s"
+                     data-desc="Compact luxury sedan combining sporty handling with comfort.">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSgHKo-iCUw-vb1I8xAAbil-KCYnMqh9G17g&s" alt="BMW 3 Series" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW 3 Series</h5>
+                        <p class="card-text">$47</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW S 1000 RR"
+                     data-price="26"
+                     data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfa0uk31O8INxHHFQ_0_v1fAAMWHXgsEX-EQ&s"
+                     data-desc="High-performance sport motorcycle with racing DNA.">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfa0uk31O8INxHHFQ_0_v1fAAMWHXgsEX-EQ&s" alt="BMW S 1000 RR" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW S 1000 RR</h5>
+                        <p class="card-text">$26</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW G 310 RR"
+                     data-price="34"
+                     data-img="https://etimg.etb2bimg.com/photo/112237588.cms"
+                     data-desc="Entry-level sport bike with aggressive styling and agility.">
+                    <img src="https://etimg.etb2bimg.com/photo/112237588.cms" alt="BMW G 310 RR" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW G 310 RR</h5>
+                        <p class="card-text">$34</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW R 1300 GS"
+                     data-price="26"
+                     data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ASLGqmBiKxSe-hcpY87RtThgRqUGeV9ecw&s"
+                     data-desc="Adventure motorcycle designed for off-road and touring enthusiasts.">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ASLGqmBiKxSe-hcpY87RtThgRqUGeV9ecw&s" alt="BMW R 1300 GS" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW R 1300 GS</h5>
+                        <p class="card-text">$26</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW 1 Series"
+                     data-price="19"
+                     data-img="https://images.hindustantimes.com/auto/img/2024/06/07/1600x900/2025_BMW_1_Series_1717732908047_1717732914853.jpg"
+                     data-desc="Compact and stylish hatchback with modern features.">
+                    <img src="https://images.hindustantimes.com/auto/img/2024/06/07/1600x900/2025_BMW_1_Series_1717732908047_1717732914853.jpg" alt="BMW 1 Series" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW 1 Series</h5>
+                        <p class="card-text">$19</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW 8 Series"
+                     data-price="93"
+                     data-img="https://images.hgmsites.net/lrg/2025-bmw-8-series-competition-convertible-angular-front-exterior-view_100932593_l.webp"
+                     data-desc="Luxury convertible with sporty performance and elegant design.">
+                    <img src="https://images.hgmsites.net/lrg/2025-bmw-8-series-competition-convertible-angular-front-exterior-view_100932593_l.webp" alt="BMW 8 Series" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW 8 Series</h5>
+                        <p class="card-text">$93</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card"
+                     data-name="BMW 4 Series"
+                     data-price="50"
+                     data-img="https://d1ek71enupal89.cloudfront.net/images/blocks_png/BMW/4%20SERIES/COUPE/25Bmw4Ser420iMSpo2drGryFR1_800.jpg"
+                     data-desc="Stylish coupe combining performance with luxury features.">
+                    <img src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/BMW/4%20SERIES/COUPE/25Bmw4Ser420iMSpo2drGryFR1_800.jpg" alt="BMW 4 Series" class="card-img-top product-img">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW 4 Series</h5>
+                        <p class="card-text">$50</p>
+                        <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 52%; height: auto;">
+            <div class="modal-content bg-dark text-white rounded-4">
+
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img id="modalImg" class="img-fluid rounded-3" style="max-height: 300px; width: 100%;">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-primary">
+                                $
+                                <span id="modalPrice"></span>
+                            </h4>
+                            <p id="modalDesc" class="mt-3"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="bg-primary text-white mt-5">
+        <div class="container pt-3">
+            <div class="row text-center text-md-start">
+
+                <!-- About Section -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">BMW Toys</h5>
+                    <p>Premium toy cars and bikes collection for kids and enthusiasts alike.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html" class="text-white text-decoration-none">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-white text-decoration-none">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-white text-decoration-none">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p>Email: info@bmwtoys.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                    <p>Address: 123 Toy Street, Toytown</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <small>&copy; 2026 BMW Toys. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const logoutBtn = document.getElementById("logoutBtn");
+            const loginBtn = document.getElementById("loginBtn");
+            const registerBtn = document.getElementById("registerBtn");
+
+            const userName = document.getElementById("userName");
+            const userEmail = document.getElementById("userEmail");
+            const userAvatar = document.getElementById("userAvatar");
+
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+            // ---------- LOGIN STATE ----------
+            if (currentUser && currentUser.email) {
+                logoutBtn.style.display = "block";
+                loginBtn.style.display = "none";
+                registerBtn.style.display = "none";
+
+                const users = JSON.parse(localStorage.getItem("users")) || [];
+                const fullUser = users.find(u => u.email === currentUser.email);
+
+                if (fullUser) {
+                    userName.innerText = fullUser.name;
+                    userAvatar.innerText = fullUser.name.charAt(0).toUpperCase();
+                    userEmail.innerText = fullUser.email;
+                }
+            } else {
+                logoutBtn.style.display = "none";
+                loginBtn.style.display = "block";
+                registerBtn.style.display = "block";
+
+                userName.innerText = "Guest";
+                userEmail.innerText = "Not logged in";
+                userAvatar.innerText = "G";
+            }
+
+            // ---------- LOGOUT ----------
+            logoutBtn?.addEventListener("click", () => {
+                localStorage.removeItem("currentUser");
+                window.location.href = "login.html";
+            });
+
+            // ---------- ADD TO CART ----------
+            document.querySelectorAll(".add-to-cart").forEach(btn => {
+                btn.addEventListener("click", () => {
+
+                    if (!currentUser || !currentUser.email) {
+                        alert("Please login first");
+                        window.location.href = "login.html";
+                        return;
+                    }
+
+                    const userEmail = currentUser.email;
+                    const cartKey = `cart_${userEmail}`;
+                    let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+                    const card = btn.closest(".product-card");
+                    const name = card.dataset.name;
+                    const price = Number(card.dataset.price);
+                    const img = card.dataset.img;
+
+                    const item = cart.find(p => p.name === name);
+                    if (item) item.qty++;
+                    else cart.push({ name, price, qty: 1, img });
+
+                    localStorage.setItem(cartKey, JSON.stringify(cart));
+                    window.location.href = "cart.html";
+                });
+            });
+        });
+
+
+
+
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Bootstrap modal instance
+            const productModal = new bootstrap.Modal(
+                document.getElementById("productModal")
+            );
+
+            // Click on product image
+            document.querySelectorAll(".product-img").forEach(img => {
+                img.addEventListener("click", () => {
+
+                    const card = img.closest(".product-card");
+
+                    // Fill modal content
+                    document.getElementById("modalTitle").innerText =
+                        card.getAttribute("data-name");
+
+                    document.getElementById("modalPrice").innerText =
+                        card.getAttribute("data-price");
+
+                    document.getElementById("modalImg").src =
+                        card.getAttribute("data-img");
+
+                    document.getElementById("modalDesc").innerText =
+                        card.getAttribute("data-desc");
+
+                    // Show modal
+                    productModal.show();
+                });
+            });
+
+        });
+
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.querySelector(".search-box input");
+            const productCards = document.querySelectorAll(".product-card");
+
+            searchInput.addEventListener("input", () => {
+                const query = searchInput.value.trim().toLowerCase();
+
+                productCards.forEach(card => {
+                    const name = card.dataset.name.toLowerCase();
+                    const wrapper = card.closest(".col-md-4"); // important: wrap to hide whole column
+
+                    if (name.includes(query)) {
+                        wrapper.style.display = ""; // show matching
+                    } else {
+                        wrapper.style.display = "none"; // hide non-matching
+                    }
+                });
+            });
+        });
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
